@@ -10,4 +10,14 @@ describe 'Notes' do
 
     expect(page).to have_content('Test note')
   end
+
+  it 'can be updated' do
+    visit '/'
+
+    click_on('edit')
+    fill_in('text', with: 'Update note')
+    click_on('submit')
+
+    expect(page).to have_content('Update note')
+  end
 end
