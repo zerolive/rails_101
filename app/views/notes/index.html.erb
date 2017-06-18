@@ -3,3 +3,5 @@
 <% @notes.each do |note| %>
 	<%= render 'note', note: note %>
 <% end %>
+
+<p><%= link_to :new_note, new_note_path %></p>

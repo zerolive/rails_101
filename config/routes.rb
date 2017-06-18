@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'notes#index'
 
-  get '/notes/new' => 'notes#new'
+  get '/notes/new' => 'notes#new', as: :new_note
   post '/notes' => 'notes#create'
 
   get '/notes' => 'notes#index'
