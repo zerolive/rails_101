@@ -2,7 +2,8 @@
 
 <% @notes.each do |note| %>
 	<p>
-		<%= note.text %>
-    <%= link_to :edit, edit_note_path(note.id) %>		
+		<%= note.text %> - 
+    <%= link_to :edit, edit_note_path(note.id) %> - 
+    <%= link_to :delete, destroy_note_path(note.id), method: :delete %>
 	</p>
 <% end %>

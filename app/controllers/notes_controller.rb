@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  before_action :set_note, only: [:show, :edit, :update]
+  before_action :set_note, only: [:show, :edit, :update, :destroy]
 
   def new
     @note = Note.new
@@ -26,6 +26,12 @@ class NotesController < ApplicationController
     @note.update(note_params)
 
     redirect_to note_path(@note.id)
+  end
+
+  def destroy
+    @note.destroy
+
+    redirect_to notes_path
   end
 
   private
