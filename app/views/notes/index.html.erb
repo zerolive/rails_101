@@ -1,5 +1,8 @@
 <h1>Notes</h1>
 
 <% @notes.each do |note| %>
-	<p><%= note.text %></p>
+	<p>
+		<%= note.text %>
+    <%= link_to :edit, edit_note_path(note.id) %>		
+	</p>
 <% end %>
