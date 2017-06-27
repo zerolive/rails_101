@@ -22,7 +22,7 @@ describe 'Notes' do
     expect(page).to have_content('Update note')
   end
 
-  it 'can destroy notes' do
+  it 'can be destroyed' do
     create_a_note
     visit '/'
 
